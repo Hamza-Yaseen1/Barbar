@@ -21,7 +21,8 @@ export default function Navbar() {
   const close = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-green-300/90 backdrop-blur supports-[backdrop-filter]:bg-green-300/70 shadow-sm">
+    <header className="sticky top-0 z-50  backdrop-blur 
+">
       <nav
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         aria-label="Primary"
@@ -39,7 +40,7 @@ export default function Navbar() {
           {/* Desktop nav */}
           <ul className="hidden md:flex items-center gap-8 text-md font-semibold">
             {links.map((l) => (
-              <li key={l.href}>
+              <li key={l.href} className="hover:bg-[#B5AF93] hover:text-white rounded-2xl p-2">
                 <a
                   href={l.href}
                   className="rounded px-1 py-1 transition hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black/40"
