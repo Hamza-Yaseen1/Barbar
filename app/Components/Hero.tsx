@@ -59,6 +59,9 @@ const Hero = () => {
               <p>{contact.data}</p>
             </div>
           ))}
+          <div>
+            <button className="m-5 cursor-pointer px-4 py-3 border bg-black text-white hover:bg-white hover:text-black rounded-2xl">Book Online</button>
+          </div>
         </div>
         <div className=" ">
           <img
