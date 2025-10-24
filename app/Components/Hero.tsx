@@ -32,15 +32,15 @@ const serv:Iserv[] = [
       title:"Regular Haircut"
     },
     {
-         img: "/images/image 5.png",
+         img: "/images/image 6.png",
       title:"Men’s Facial"
     },
     {
-         img: "/images/image 5.png",
+         img: "/images/image 7.png",
       title:"Royal Shave"
     },
     {
-         img: "/images/image 5.png",
+         img: "/images/image 8.png",
       title:"Kids Haircut"
     },
 ]
@@ -78,7 +78,7 @@ const Hero = () => {
         <div className="pl-32">
           <img src={data.img} alt="" />
           <h3 className="font-semibold mt-2">{data.title}</h3>
-        <button className="mt-5 px-10 py-2 border rounded-2xl bg-black text-white hover:bg-white hover:text-black transition transform-border">More</button>
+        <button className="mt-5 px-10 cursor-pointer py-2 border rounded-2xl bg-black text-white hover:bg-white hover:text-black transition transform-border">More</button>
         </div>
         ))}
        
