@@ -306,7 +306,7 @@ const Pricing: React.FC<PricingProps> = ({
             <h1 className="text-3xl font-extrabold leading-tight text-neutral-900 md:text-4xl">
               Welcome to the
               <br />
-              <span className="block text-4xl md:text-5xl">upscale barber studio</span>
+              <span className="block text-3xl md:text-5xl">upscale barber studio</span>
             </h1>
             <p className="mt-4 max-w-prose text-neutral-700">
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -316,7 +316,7 @@ const Pricing: React.FC<PricingProps> = ({
             <div className="mt-7">
               <a
                 href="#book"
-                className="inline-flex items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-base font-semibold text-white shadow-lg transition  hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800"
+                className="inline-flex hover:bg-[#B5AF93] items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-base font-semibold text-white shadow-lg transition  hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800"
               >
                 Book Online
               </a>
@@ -326,13 +326,6 @@ const Pricing: React.FC<PricingProps> = ({
       </div>
     </section>
   
-
-{/* /*
-Notes:
-- Replace the two Unsplash URLs with your own assets if desired.
-- Tailwind classes used: rounded-[28px], ring, shadows, responsive grid.
-- Drop this component into any React/Next.js page and ensure Tailwind + Framer Motion are installed.
-- Suggested Tailwind config color alias (optional): add { olive: '#9A9A74' } to theme.extend.colors for the olive blob (or keep current using the text-olive class via a custom CSS rule). */}
     </section>
     </>
   );
