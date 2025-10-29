@@ -118,6 +118,7 @@ const Pricing: React.FC<PricingProps> = ({
   const [showDetails, setShowDetails] = React.useState(defaultShowDetails);
 
   return (
+    <> 
     <section
       className={`mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 ${className}`}
       aria-labelledby="pricing-heading"
@@ -247,7 +248,93 @@ const Pricing: React.FC<PricingProps> = ({
       >
         Need something custom? Get in touch and we’ll tailor a package for you.
       </motion.p>
+
+
     </section>
+
+    <section>
+
+    <section className="relative isolate w-full overflow-hidden bg-[url('https://images.unsplash.com/photo-1541769740-0a9c34cfaf17?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center">
+      {/* dark overlay for contrast */}
+      <div className="absolute inset-0 bg-neutral-900/60" />
+
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-6 py-16 md:py-20 lg:grid-cols-[1fr_1.1fr] lg:gap-12 lg:px-8">
+        {/* LEFT: decorative shape + image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative mx-auto h-[420px] w-[420px] sm:h-[460px] sm:w-[460px] lg:h-[480px] lg:w-[480px]"
+        >
+          {/* Abstract blobs (SVG) */}
+          <svg
+            className="absolute -left-6 top-4 h-[115%] w-[115%] -rotate-6 text-olive/90"
+            viewBox="0 0 600 600"
+            fill="currentColor"
+            aria-hidden
+          >
+            <path d="M464.7 292.8c9 81.6-44.7 151.2-116.6 192.1C276.2 525.8 191 538 127.8 492.3 64.5 446.5 23.3 342.9 61.4 259.8c38-83.1 155.5-136.6 252.4-129.5 96.9 7.1 141.9 81 150.9 162.5Z" />
+          </svg>
+          <svg
+            className="absolute -right-4 top-6 h-[110%] w-[110%]  rotate-6 text-stone-300/80"
+            viewBox="0 0 600 600"
+            fill="currentColor"
+            aria-hidden
+          >
+            <path d="M460 286c0 82.8-43.8 161.5-119.2 196.2-75.4 34.7-174.4 14.3-231-42.5C53.2 383 33.5 299.5 60.8 230.6 88 161.8 162.2 107.7 239.5 92.8 316.9 77.8 397.3 102 440.4 161.6 454.6 181.4 460 233.2 460 286Z" />
+          </svg>
+
+          {/* Circular photo */}
+          <div className="absolute left-1/2 top-1/2 z-10 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full ring-8 ring-stone-700/50 shadow-2xl">
+            <img
+              src="/images/Ellipse 2.png"
+              alt="Barber shaving a client in an upscale studio"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </motion.div>
+
+        {/* RIGHT: text card */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative z-10"
+        >
+          <div className="rounded-[28px] bg-neutral-200/95 p-7 shadow-2xl backdrop-blur md:p-10">
+            <h1 className="text-3xl font-extrabold leading-tight text-neutral-900 md:text-4xl">
+              Welcome to the
+              <br />
+              <span className="block text-4xl md:text-5xl">upscale barber studio</span>
+            </h1>
+            <p className="mt-4 max-w-prose text-neutral-700">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <div className="mt-7">
+              <a
+                href="#book"
+                className="inline-flex items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-base font-semibold text-white shadow-lg transition  hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800"
+              >
+                Book Online
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  
+
+{/* /*
+Notes:
+- Replace the two Unsplash URLs with your own assets if desired.
+- Tailwind classes used: rounded-[28px], ring, shadows, responsive grid.
+- Drop this component into any React/Next.js page and ensure Tailwind + Framer Motion are installed.
+- Suggested Tailwind config color alias (optional): add { olive: '#9A9A74' } to theme.extend.colors for the olive blob (or keep current using the text-olive class via a custom CSS rule). */}
+    </section>
+    </>
   );
 };
 
