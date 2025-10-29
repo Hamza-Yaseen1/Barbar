@@ -147,7 +147,7 @@ const BarbershopInfoSection: React.FC = () => {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-center">
-                <Button className="rounded-xl">View Details</Button>
+                <Button className="rounded-xl hover:bg-[#B5AF93]">View Details</Button>
               </CardFooter>
             </Card>
           </motion.div>
@@ -162,15 +162,12 @@ const BarbershopInfoSection: React.FC = () => {
             transition={{ duration: 0.35 }}
             className="mt-10 flex justify-center"
           >
-            <Button size="lg" className="rounded-2xl px-6 py-5 text-base">
+            <Button size="lg" className="rounded-2xl px-6 py-5 text-base hover:bg-[#B5AF93]">
               Book an Appointment
             </Button>
           </motion.div>
         </AnimatePresence>
       </div>
-
-      {/* Soft vignette edge */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/70" />
     </section>
   );
 };
