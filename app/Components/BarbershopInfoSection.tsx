@@ -18,7 +18,6 @@ export type IFeature = {
   description?: string;
 };
 
-// Data (can be moved to CMS)
 const features: IFeature[] = [
   { title: "Always welcoming environment", description: "Cozy lounge, complimentary drinks, and friendly staff." },
   { title: "Our masters focus on the quality", description: "Senior barbers with 8+ years of experience on average." },
@@ -60,7 +59,7 @@ const BarbershopInfoSection: React.FC = () => {
       />
 
       {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
+      <div className="absolute" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-12">
         {/* Header */}
@@ -71,7 +70,7 @@ const BarbershopInfoSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.4 }}
-            className="text-3xl font-bold tracking-tight sm:text-4xl"
+            className="text-3xl font-bold tracking-tight sm:text-4xl text-white"
           >
             Why Choose Us
           </motion.h1>
@@ -80,7 +79,7 @@ const BarbershopInfoSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.4, delay: 0.05 }}
-            className="mt-3 text-lg text-gray-700"
+            className="mt-3 text-white text-xl"
           >
             In addition, here are 5 more reasons why men prefer <span className="font-semibold">Manhattan Barbershop N.Y.C</span>:
           </motion.p>
@@ -114,28 +113,7 @@ const BarbershopInfoSection: React.FC = () => {
               </motion.li>
             ))}
 
-            {/* Show/Hide toggle (uses user's preferred pattern) */}
-            <div className="pt-2">
-              <Button
-                variant="outline"
-                className="mx-auto flex items-center gap-2 rounded-xl"
-                aria-expanded={expanded}
-                aria-controls="features-list"
-                onClick={() => setExpanded((s) => !s)}
-              >
-                {expanded ? (
-                  <>
-                    Show fewer
-                    <ChevronUp className="h-4 w-4" aria-hidden="true" />
-                  </>
-                ) : (
-                  <>
-                    Show all reasons
-                    <ChevronDown className="h-4 w-4" aria-hidden="true" />
-                  </>
-                )}
-              </Button>
-            </div>
+           
           </motion.ul>
 
           {/* Hours Card */}
