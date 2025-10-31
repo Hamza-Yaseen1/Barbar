@@ -1,4 +1,6 @@
 import BarbershopInfoSection from "./Components/BarbershopInfoSection";
+import Contact from "./Components/Contact";
+import HairStyles from "./Components/HairStyles";
 import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import Pricing from "./Components/Pricing";
@@ -12,6 +14,8 @@ export default function Home() {
 <BarbershopInfoSection />
 < Pricing/>
 <Services/>
+<HairStyles/>
+<Contact/>
     </>
   );
 }
